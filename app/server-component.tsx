@@ -1,4 +1,4 @@
-import { getSession, getAccessToken } from '@auth0/nextjs-auth0';
+import { getSession, getAccessToken } from '@auth0/nextjs-auth0/edge';
 
 export default async function ServerComponent() {
   const session = await getSession();
@@ -15,3 +15,5 @@ export default async function ServerComponent() {
   }
   return <></>;
 }
+
+export const runtime = 'edge';

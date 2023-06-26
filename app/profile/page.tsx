@@ -1,5 +1,5 @@
 import React, { cache } from 'react';
-import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0';
+import { getSession, withPageAuthRequired } from '@auth0/nextjs-auth0/edge';
 import ServerComponent from '@/app/server-component';
 import ClientComponent from '@/app/client-component';
 
@@ -24,3 +24,5 @@ export default withPageAuthRequired(
   },
   { returnTo: '/profile' }
 );
+
+export const runtime = 'edge';
