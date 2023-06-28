@@ -1,5 +1,5 @@
 import React from 'react';
-import { getSession } from '@auth0/nextjs-auth0/edge';
+import { getSession } from '@auth0/nextjs-auth0';
 import ServerComponent from '@/app/server-component';
 import ClientComponent from '@/app/client-component';
 
@@ -21,5 +21,3 @@ export default async function Page() {
     </main>
   );
 }
-
-export const runtime = 'edge';

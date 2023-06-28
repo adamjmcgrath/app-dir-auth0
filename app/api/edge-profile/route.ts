@@ -1,4 +1,4 @@
-import { getSession, withApiAuthRequired } from '@auth0/nextjs-auth0';
+import { getSession, withApiAuthRequired } from '@auth0/nextjs-auth0/edge';
 import { NextResponse } from 'next/server';
 
 const GET = withApiAuthRequired(async () => {
@@ -8,3 +8,5 @@ const GET = withApiAuthRequired(async () => {
 });
 
 export { GET };
+
+export const runtime = 'edge';
